@@ -32,6 +32,12 @@
  1108  docker container exec -it mysql bash
  1109  docker container ls
  1110  docker pull alpine
+
+# Note for next lectures on Docker Networks
+
+Hey just a quick note before doing the next few lectures. A recent June 2017 change in the official nginx image https://hub.docker.com/_/nginx (nginx  or nginx:latest ) removes ping, but I use it in the next few videos to test connectivity, so you might get an error about "ping not found". I'm working on updates to those videos but until I can get them processed and uploaded, just do this:
+
+Anywhere I do a docker container run <stuff> nginx , where nginx  is the image you should use, replace that with nginx:alpine , which still has ping command in it.
  1111  docker image ls
  1112  docker container run -it alpine bash
  1113  docker container run -it alpine sh
