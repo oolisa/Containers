@@ -58,3 +58,21 @@ Anywhere I do a docker container run <stuff> nginx , where nginx  is the image y
  1111  docker image ls
  1112  docker container run -it alpine bash
  1113  docker container run -it alpine sh
+
+# Docker Networks DNS
+
+ 1155  docker container run -d --name my_nginx --network my_app_net nginx:alpine
+ 1156  docker network inspect 46a922116a74
+ 1157  docker container exec -it my_nginx ping new_nginx
+ 1158  docker container exec -it new_nginx ping my_nginx
+ 1159  docker container ls
+ 1160  docker container stop c5e93b2a99f9
+ 1161  docker container stop 52276a1514cd
+ 1162  docker container rm  52276a1514cd
+ 1163  docker network ls
+ 1164  docker network inspect 46a922116a74
+ 1165  docker container run -d --name new_nginx --network my_app_net nginx:alpine
+ 1166  docker network inspect 46a922116a74
+ 1167  docker container exec -it my_nginx ping new_nginx
+ 1168  docker container exec -it new_nginx ping my_nginx
+ 1169  docker network ls
