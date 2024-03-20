@@ -1,7 +1,7 @@
 # Docker-X-Kubernetes-X-Openshift
 Notes from my experience learning Docker Kubernetes and Openshift.
 
-Changes To Upcoming Assignment
+Changes To Upcoming Assignment after Section 4.
 In the next video, you'll get a fun assignment on learning how Docker networks handle DNS and load balancing.
 
 There have been a few changes to the images and commands in that assignment, so once you've watched the assignment, you can come back here for updated instructions.
