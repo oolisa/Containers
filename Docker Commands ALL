@@ -76,3 +76,13 @@ Anywhere I do a docker container run <stuff> nginx , where nginx  is the image y
  1167  docker container exec -it my_nginx ping new_nginx
  1168  docker container exec -it new_nginx ping my_nginx
  1169  docker network ls
+
+
+# Assignment CLI App Testing Solution
+docker container run --rm -it centos:7 bash
+
+docker ps -a
+
+docker container run --rm -it ubuntu:14.04 bash
+
+docker ps -a
