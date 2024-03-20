@@ -3,3 +3,12 @@
 # Learn the 'docker container --rm' command so you can save cleanup.
 # Make sure curl is installed and on latest version for that distro : ubuntu- apt-get update && apt-get install curl, centos- yum update curl.
 # Check curl --version 
+
+# Solution 
+docker container run --rm -it centos:7 bash
+
+docker ps -a
+
+docker container run --rm -it ubuntu:14.04 bash
+
+docker ps -a
