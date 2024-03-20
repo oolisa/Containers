@@ -38,6 +38,23 @@
 Hey just a quick note before doing the next few lectures. A recent June 2017 change in the official nginx image https://hub.docker.com/_/nginx (nginx  or nginx:latest ) removes ping, but I use it in the next few videos to test connectivity, so you might get an error about "ping not found". I'm working on updates to those videos but until I can get them processed and uploaded, just do this:
 
 Anywhere I do a docker container run <stuff> nginx , where nginx  is the image you should use, replace that with nginx:alpine , which still has ping command in it.
+
+# Docker Networks CLI Management 
+
+ 1125  docker network ls
+ 1126   docker network inspect bridge
+ 1127  docker network create my_app_net
+ 1128  docker network ls
+ 1129  docker create --help
+ 1130  docker container run -d --name new_nginx --network my_app_net nginx
+ 1131   docker network inspect my_app_net
+ 1132  docker network ls
+ 1133  docker network connect f105cb14e9bc 46a922116a74
+ 1134  docker container ls
+ 1135  docker network connect 46a922116a74 ff36991fd147
+ 1136  docker container inspect ff36991fd147
+ 1137  docker network disconnect 46a922116a74 ff36991fd147
+ 1138  docker container inspect ff36991fd147
  1111  docker image ls
  1112  docker container run -it alpine bash
  1113  docker container run -it alpine sh
