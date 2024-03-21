@@ -86,3 +86,15 @@ docker ps -a
 docker container run --rm -it ubuntu:14.04 bash
 
 docker ps -a
+
+# DNS Round Robin Test
+ 1205  docker network create dude
+ 1206  docker container run -d --net dude --net-alias search elasticsearch:2
+ 1207  docker container ls
+ 1208  docker container run -d --net dude --net-alias search bretfisher/httpenv
+ 1209  docker container ls
+ 1210  docker container run -d --net dude --net-alias search bretfisher/httpenv
+ 1211  docker container ls
+ 1212  docker container run --rm --net dude alpine nslookup search
+ 1213  docker container run --rm --net dude centos curl -s search:8888
+ 1214  docker container run --rm --net dude centos curl -s search:8888
