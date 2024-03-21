@@ -98,3 +98,22 @@ docker ps -a
  1212  docker container run --rm --net dude alpine nslookup search
  1213  docker container run --rm --net dude centos curl -s search:8888
  1214  docker container run --rm --net dude centos curl -s search:8888
+
+# Docker Images Layers and Tags 
+
+ 1237  docker image push olisabosun/nginx
+ 1238  docker pull
+ 1239  clear
+ 1240  docker image ls
+ 1241  docker image rm 070027a3cbe0
+ 1242  docker image rm -f 070027a3cbe0
+ 1243  docker image ls
+ 1244  docker image tag nginx olisabosun/nginx
+ 1245  docker pull nginx
+ 1246  docker image tag nginx olisabosun/nginx
+ 1247  docker image ls
+ 1248  docker image push olisabosun/nginx
+ 1249  docker image tag  olisabosun/nginx olisabosun/nginx:testing
+ 1250  docker image ls
+ 1251  docker image push olisabosun/nginx:testing
+ 1252  docker image ls
