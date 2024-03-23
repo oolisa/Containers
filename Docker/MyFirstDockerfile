@@ -1,16 +1,16 @@
-RUN 
-&& apk add --no-cache tini
+FROM node:6-alpine
+
+EXPOSE 3000
+
+RUN apk add --no-cache tini
 
 WORKDIR /usr/src/app
 
-COPY ./package.json
+COPY package.json package.json
 
-RUN 
-&& npm install
-&& npm cache clean --force
+RUN npm install && npm cache clean --force
 
-COPY * .
+COPY . .
 
-EXPOSE 80
-
-CMD ["/sbin/tini -- node ./bin/www"] 
+CMD [ "/sbin/tini", "--", "node", "./bin/www" ]
+~                                                       
