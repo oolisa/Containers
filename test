@@ -1,0 +1,16 @@
+1357  git pull
+ 1358  ls -l
+ 1359  git add Job2
+ 1360  git commit -a
+ 1361  cd ..
+ 1362  cd Containers
+ 1363  ls -l
+ 1364  git add Assignment
+ 1365  git commit -a
+ 1366  git commit -a "Added test directory"
+ 1367  git commit 'Add test'
+ 1368  git commit 'Assignment'
+ 1369  git commit 'sample'
+ 1370  git commit 'sample' "Test"
+ 1371  cd ..
+ 1372  rm -rf Containers
