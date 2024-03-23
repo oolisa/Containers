@@ -2,6 +2,10 @@
     "folders": [
         {
             "path": "Docker"
+        },
+        {
+            "name": "udemy-docker-mastery",
+            "path": "../../Documents/udemy-docker-mastery"
         }
     ]
 }
