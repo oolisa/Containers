@@ -117,3 +117,7 @@ docker ps -a
  1250  docker image ls
  1251  docker image push olisabosun/nginx:testing
  1252  docker image ls
+
+# Running Docker Builds
+
+docker image build -t customnginx .
