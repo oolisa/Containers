@@ -151,3 +151,9 @@ docker image build -t customnginx .
  1431  docker image ls
  1432  docker image rm olisabosun/node-app
  1433  docker container run --rm -p 80:3000 olisabosun/node-app
+
+Using Prune to Keep Your Docker System Clean (YouTube)
+You can use "prune" commands to clean up images, volumes, build cache, and containers. Examples include:
+- docker image prune to clean up just "dangling" images
+
+- docker system prune will clean up everything you're not currently using
