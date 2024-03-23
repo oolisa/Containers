@@ -121,3 +121,15 @@ docker ps -a
 # Running Docker Builds
 
 docker image build -t customnginx .
+
+# Extending Official Images 
+
+ 1300  docker container run -p 80:80 --rm nginx
+ 1301  docker image build -t nginx-with-html .
+ 1302  docker container run -p 80:80 --rm nginx-with-html
+ 1303  docker image ls
+ 1304  docker image tag nginx-with-html:latest olisabosun/nginx-with-html:latest
+ 1305  docker image ls
+ 1306  docker push
+ 1307  docker image push --help
+ 1308  docker image push olisabosun/nginx-with-html:latest
