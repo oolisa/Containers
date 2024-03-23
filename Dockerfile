@@ -117,7 +117,7 @@ RUN set -x \
 # COPY 30-tune-worker-processes.sh /docker-entrypoint.d
 # ENTRYPOINT ["/docker-entrypoint.sh"]
 
-EXPOSE 80
+EXPOSE 80 8080
 # expose these ports on the docker virtual network
 # you still need to use -p or -P to open/forward these ports on host
 
