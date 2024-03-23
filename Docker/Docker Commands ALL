@@ -133,3 +133,21 @@ docker image build -t customnginx .
  1306  docker push
  1307  docker image push --help
  1308  docker image push olisabosun/nginx-with-html:latest
+
+# Build Your own Docker file and Run containers from it
+
+ 1419  docker image build -t nodeapp .
+ 1420  docker image ls
+ 1421  docker container run -p 3000:80 nodeapp
+ 1422  docker container ls
+ 1423  docker container run -p 80:80 --rm nodeapp
+ 1424  docker container run -p 80:80 --rm nodeapp:latest
+ 1425  ls -l
+ 1426  docker container run --rm -p 80:3000 nodeapp
+ 1427  docker images ls
+ 1428  docker tag nodeapp olisabosun/node-app
+ 1429  docker push --help
+ 1430  docker push olisabosun/node-app
+ 1431  docker image ls
+ 1432  docker image rm olisabosun/node-app
+ 1433  docker container run --rm -p 80:3000 olisabosun/node-app
