@@ -167,3 +167,8 @@ You can use "prune" commands to clean up images, volumes, build cache, and conta
  1459  docker container run -d --name mysql3 -e MYSQL_ALLOW_EMPTY_PASSWORD=True -v mysql-db:/var/lib/mysql mysql
  1460  docker volume ls
  1461  docker container inspect mysql3
+
+# Bind Mounts
+
+ 1014  docker container run -d --name nginx -p 80:80 -v $(pwd):/usr/share/nginx/html nginx
+ 1015  docker container run -d --name nginx2 -p 8080:80  nginx
