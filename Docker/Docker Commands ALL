@@ -157,3 +157,13 @@ You can use "prune" commands to clean up images, volumes, build cache, and conta
 - docker image prune to clean up just "dangling" images
 
 - docker system prune will clean up everything you're not currently using
+# Persistent Data Volumes, Named Volumes
+
+ 1454  docker volume ls
+ 1455  docker container run -d --name mysql -e MYSQL_ALLOW_EMPTY_PASSWORD=True -v mysql-db:/var/lib/mysql mysql
+ 1456  docker volume ls
+ 1457  docker volume inspect mysql-db
+ 1458  docker container rm -f mysql
+ 1459  docker container run -d --name mysql3 -e MYSQL_ALLOW_EMPTY_PASSWORD=True -v mysql-db:/var/lib/mysql mysql
+ 1460  docker volume ls
+ 1461  docker container inspect mysql3
