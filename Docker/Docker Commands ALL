@@ -172,3 +172,13 @@ You can use "prune" commands to clean up images, volumes, build cache, and conta
 
  1014  docker container run -d --name nginx -p 80:80 -v $(pwd):/usr/share/nginx/html nginx
  1015  docker container run -d --name nginx2 -p 8080:80  nginx
+
+# Update for Recent Postgres Changes Assignment
+
+docker volume create psql
+docker run -d --name psql1 -e POSTGRES_PASSWORD=mypassword -v psql:/var/lib/postgresql/data postgres:15.1
+docker logs psql1
+docker stop psql1
+docker run -d --name psql2 -e POSTGRES_PASSWORD=mypassword -v psql:/var/lib/postgresql/data postgres:15.2
+docker logs psql2
+docker stop psql2
