@@ -209,3 +209,13 @@ USER 1000:1000
 Note: When setting a Dockerfile's USER, use numbers, which work better in Kubernetes than using names.
 
 Note 2: If ps doesn't work in your container, you may need to install it. In debian-based images with apt, you can add it with apt-get update && apt-get install procps
+
+# Docker Compose CLI commands
+
+1022  docker-compose up
+ 1023  docker-compose up -d
+ 1024  docker compose logs
+ 1025  docker-compose ps
+ 1026  docker-compose top
+ 1027  docker-compose down
+ 1028  docker-compose ps
